@@ -1,0 +1,1431 @@
+[
+  {
+    "de": "Laich",
+    "tr": "Balık Yumurtası",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Laichen",
+    "tr": "Yumurtlama/üreme",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Karpfen",
+    "tr": "Sazan",
+    "lat": "Cyprinidae",
+    "page": 1
+  },
+  {
+    "de": "Schleie",
+    "tr": "Kadife",
+    "lat": "Tinca tinca",
+    "page": 1
+  },
+  {
+    "de": "Elritze",
+    "tr": "Minnow / Türkçesi yok",
+    "lat": "Phoxinus phoxinus",
+    "page": 1
+  },
+  {
+    "de": "Quappe",
+    "tr": "Tatlısu gelinciği",
+    "lat": "Lota lota",
+    "page": 1
+  },
+  {
+    "de": "Rogen",
+    "tr": "Balık Yumurtası",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Rogner",
+    "tr": "Yumurtlama yaşına ulaşmış Dişi Balık",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Milchner",
+    "tr": "Üreme yaşına ulaşmış Erkek Balık",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Schmerlenartige",
+    "tr": "Sazangillerin alt türüne verilen genel isim / Türkçe net bir isme rastlanmadı",
+    "lat": "Cobitoidea",
+    "page": 1
+  },
+  {
+    "de": "Schmerle",
+    "tr": "Bulunan en yakın Türkçe isim Ankara Çamurbalığı (Neomacheilus Angorae)",
+    "lat": "Cobitoidea",
+    "page": 1
+  },
+  {
+    "de": "Gründling",
+    "tr": "Dere Kaya Balığı",
+    "lat": "Gobio gobio",
+    "page": 1
+  },
+  {
+    "de": "Groppe/Mühlkoppe/Koppe",
+    "tr": "Taşaltı Balığı",
+    "lat": "Cottus gobio",
+    "page": 1
+  },
+  {
+    "de": "Schlammpeitzger",
+    "tr": "Türkçesi bulunamadı",
+    "lat": "Misgurnus fossilis",
+    "page": 1
+  },
+  {
+    "de": "Steinbeißer",
+    "tr": "Taşısıran Balığı",
+    "lat": "Cobitis taenia",
+    "page": 1
+  },
+  {
+    "de": "Bitterlinge",
+    "tr": "Acı Balık",
+    "lat": "Rhodeus amarus",
+    "page": 1
+  },
+  {
+    "de": "Barbe",
+    "tr": "Bekir Balığı, Bıyıklı",
+    "lat": "Barbus barbus Bu sözlük Ömer Dicentrarchus labrax Altuntop tarafından Perca fluviatilis hazırlanmış tır. Her Hakkı Sander lucioperca saklıdır. Çoğaltılam Squalius cephalus az, Blicca bjoerkna dağıtılamaz , satılamaz. Carassius carassius",
+    "page": 1
+  },
+  {
+    "de": "Wolfsbarsch",
+    "tr": "Levrek",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Barsch / Flussbarsch",
+    "tr": "Tatlısu Levreği",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Schwimmblase",
+    "tr": "Hava Kesesi",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Zander",
+    "tr": "Sudak",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Döbel",
+    "tr": "Tatlısu Kefali",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Güster",
+    "tr": "Tahta Balığı",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Karausche",
+    "tr": "Havuz Balığı",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Hecht",
+    "tr": "Turna Balığı",
+    "lat": "Esox lucius",
+    "page": 1
+  },
+  {
+    "de": "Raubfisch",
+    "tr": "Yırtıcı Balık",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Weißfisch",
+    "tr": "Tatlısuda yaşayan ve genellikle Sazangiller ailesinden olan, küçük gümüşi renklere sahip balıklara verilen genel ad. Örn: Kızılkanat, Kızılgöz",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Äsche",
+    "tr": "Gölge Balığı",
+    "lat": "Thymallus thymallus",
+    "page": 1
+  },
+  {
+    "de": "Kleine Maräne",
+    "tr": "Alabalık ailesinin alt türlerinden. Türkçesi bulunamadı",
+    "lat": "Coregonus albula",
+    "page": 1
+  },
+  {
+    "de": "Seesaibling",
+    "tr": "Alp Alabalığı ( Alp Göl Alabalığı)",
+    "lat": "Salvelinus alpinus",
+    "page": 1
+  },
+  {
+    "de": "Seeforelle",
+    "tr": "Göl Alabalığı",
+    "lat": "Salmo trutta lacustris",
+    "page": 1
+  },
+  {
+    "de": "Regenbogenforelle",
+    "tr": "Gökkuşağı Alabalığı",
+    "lat": "Oncorhynchus mykiss",
+    "page": 1
+  },
+  {
+    "de": "Bachforelle",
+    "tr": "Dere Alabalığı",
+    "lat": "Salmo trutta fario",
+    "page": 1
+  },
+  {
+    "de": "Huchen",
+    "tr": "Tuna Somonu (Türkçe isime rastlanmadı. Bu isim Ö. Altuntop tarafından verilmiştir.)",
+    "lat": "Hucho hucho",
+    "page": 1
+  },
+  {
+    "de": "Bachsaibling",
+    "tr": "Alp Dere Alabalığı",
+    "lat": "Salvelinus fontinalis",
+    "page": 1
+  },
+  {
+    "de": "Lachs",
+    "tr": "Somon / Som Balığı  (Lachs bu ailenin genel ismidir. Almanyada kast edilen Atlantik Somonudur.)",
+    "lat": "Salmo salar",
+    "page": 1
+  },
+  {
+    "de": "Schlundzähne",
+    "tr": "Farinks dişi / Yutak Dişleri",
+    "lat": null,
+    "page": 1
+  },
+  {
+    "de": "Wels",
+    "tr": "Yayın Balığı",
+    "lat": "Silurus glanis",
+    "page": 1
+  },
+  {
+    "de": "Zwergwels",
+    "tr": "Cüce Yayın / Kedi Yayın Balığı",
+    "lat": "Ameiurus melas",
+    "page": 1
+  },
+  {
+    "de": "Forellenbarsch",
+    "tr": "(Kocaağızlı) Kara Levrek",
+    "lat": "Micropterus salmoides",
+    "page": 1
+  },
+  {
+    "de": "Aal (Europäischer)",
+    "tr": "(Avrupa) Yılan Balığı",
+    "lat": "Anguilla anguilla",
+    "page": 1
+  },
+  {
+    "de": null,
+    "tr": "1",
+    "lat": null,
+    "page": 1,
+    "orphan": true
+  },
+  {
+    "de": "Blankaal",
+    "tr": "Açıklama: Yetişkin boyutlara ulaşan Yılan Balıkları üreme amaçlı",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": "Rotauge",
+    "tr": "Kızılgöz",
+    "lat": "Rutilus rutilus",
+    "page": 2
+  },
+  {
+    "de": "Rotfeder",
+    "tr": "Kızılkanat",
+    "lat": "Scardinius erythrophthalmus",
+    "page": 2
+  },
+  {
+    "de": "Dornhai",
+    "tr": "Dikenli Köpekbalığı",
+    "lat": "Squalus acanthias",
+    "page": 2
+  },
+  {
+    "de": "Flosse",
+    "tr": "Yüzgeç",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": "Afterflosse",
+    "tr": "Anal Yüzgeç",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": "Rückenflosse",
+    "tr": "Sırt Yüzgeci",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": "Bauchflosse",
+    "tr": "Karın Yüzgeci",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": "Kabeljau / Dorsch",
+    "tr": "Morina Balığı",
+    "lat": "Gadus morhua",
+    "page": 2
+  },
+  {
+    "de": "Makrele",
+    "tr": "Uskumru",
+    "lat": "Scomber scombrus",
+    "page": 2
+  },
+  {
+    "de": "Seelachs / Köhler",
+    "tr": "Kömür Balığı (Her ne kadar ticari amaçla Deniz Somonu densede, somon türü değildir. Morina Balıkları ailesindendir.",
+    "lat": "Pollachius virens",
+    "page": 2
+  },
+  {
+    "de": "Knurrhahn",
+    "tr": "Kırlangıç Balığı",
+    "lat": "Triglidae",
+    "page": 2
+  },
+  {
+    "de": "Hering (Atlantische)",
+    "tr": "Atlantik Ringası",
+    "lat": "Clupea harengus",
+    "page": 2
+  },
+  {
+    "de": "Petermännchen",
+    "tr": "Trakonya (Dikkat dikenleri çok zehirlidir)",
+    "lat": "Trachinidae",
+    "page": 2
+  },
+  {
+    "de": "Seezunge",
+    "tr": "Dil Balığı",
+    "lat": "Solea solea",
+    "page": 2
+  },
+  {
+    "de": "Stint",
+    "tr": "Çıra Balığı. Her ne kadar Wikipediada Çamuka Balığı olarak geçsede Bilimsel ismine bakıldığında iksinin farklı türler olduğu görülmektedir. Çok yağlı bir yapısı olduğu için, Kızılderililer bu balığı kurutup çıra olarak kullanırlarmış. Bende bu yüzden bilimsel bir düzeltme yapılana kadar Çıra Balığı olarak adlandıracağım.",
+    "lat": "Osmerus eperlanus",
+    "page": 2
+  },
+  {
+    "de": "Stichling",
+    "tr": "Dikenli Balık",
+    "lat": "Gasterosteidae",
+    "page": 2
+  },
+  {
+    "de": "Brasse",
+    "tr": "Çapak Balığı",
+    "lat": "Abramis brama",
+    "page": 2
+  },
+  {
+    "de": "Aland",
+    "tr": "Sazangillerden bir türdür. Türkçe ismine rastlanmadı.",
+    "lat": "Leuciscus idus",
+    "page": 2
+  },
+  {
+    "de": "Rapfen",
+    "tr": "Kocaağız Balığı",
+    "lat": "Aspius aspius",
+    "page": 2
+  },
+  {
+    "de": "Bachneunauge",
+    "tr": "Dere Taşemeni",
+    "lat": "Lampetra planeri",
+    "page": 2
+  },
+  {
+    "de": "Flussneunauge",
+    "tr": "Irmak Taşemeni",
+    "lat": "Lampetra fluviatilis",
+    "page": 2
+  },
+  {
+    "de": "Schneider",
+    "tr": "Noktalı İnci Balığı",
+    "lat": "Alburnoides bipunctatus",
+    "page": 2
+  },
+  {
+    "de": "Kaulbarsch",
+    "tr": "Levrekrekgillerden Almanyanın yerel türlerinden olduğundan Türkçe karşılığı yoktur. Literatürde başaşağı duran levrek, almanca düz çeviride ise Çiğneyen Levrek olarak türkçeye çeviri yapılabilir. Ben tercihen bu balığı başaşağı dik biçimde dipten kurtçukları avlayarak beslendiği için Dikbaş Levrek olarak isimlendireceğim.",
+    "lat": "Gymnocephalus cernua",
+    "page": 2
+  },
+  {
+    "de": "Flunder",
+    "tr": "Dere Pisisi / Pisi Balığı",
+    "lat": "Platichthys flesus",
+    "page": 2
+  },
+  {
+    "de": "Röhricht",
+    "tr": "Sazlık, genellikle su kenarında uzun boylu otsu bir bitki örtüsü",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": "Drill",
+    "tr": "Balık yakalandıktan sonra, balığı yormak için harcanan zaman, balığı yorma işlemi",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": "Kolk / Kolke",
+    "tr": "Akarsularda taşların arkasında akıntının oluşturduğu girdaplar sayesinde meydana gelen çukurlar",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": "Gumpen",
+    "tr": "Akarsularda suyun zamanla oluşturduğu küçük havuzcuklar",
+    "lat": null,
+    "page": 2
+  },
+  {
+    "de": null,
+    "tr": "olarak Avrupadan Meksika kıyılarına, Sargasso Denizine göç ederler. Bu evrelerinde sırtları siyah renk, karınlarıda gümüşi bir",
+    "lat": null,
+    "page": 2,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "renk alır. Bu yüzden yumurtlamak için göç eden Yılan Balığına almanca Blankaal denir. (Çoğul: Blankaale)",
+    "lat": null,
+    "page": 2,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "2",
+    "lat": null,
+    "page": 2,
+    "orphan": true
+  },
+  {
+    "de": "Eutrophierung",
+    "tr": "Ötrofikasyon, göl gibi herhangi bir büyük su ekosisteminde, başta",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Eisvogel",
+    "tr": "Yalıçapkını",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Goldorfe",
+    "tr": "Aland balığından türetilen, Havuz için yetiştirilen altın renkli balıklardır. Sazangillerdendir. Türkçesi bulunamadığı için Altın Havuz Balığı olarak adlandıracağım.",
+    "lat": "Leuciscus idus",
+    "page": 3
+  },
+  {
+    "de": "Kolben-Wasserkäfer",
+    "tr": "Su Çöpçüsü (Su Böceği)",
+    "lat": "Hydrophilus piceus",
+    "page": 3
+  },
+  {
+    "de": "Waidgerecht",
+    "tr": "Kuralına ve kanuna uygun olarak avlanmak.",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Fischtöter / Schlagstock",
+    "tr": "Balığı bayıltmak için kullanılan sopa",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Molch",
+    "tr": "Su Semenderi",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Molchlarve",
+    "tr": "Su Semenderi Larvası",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Kaulquappen",
+    "tr": "İribaş / Kurbağa yavruları",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Bekassine",
+    "tr": "Su Çulluğu",
+    "lat": "Gallinago gallinago",
+    "page": 3
+  },
+  {
+    "de": "Brachvogel",
+    "tr": "Kervan Çulluğu",
+    "lat": "Numenius",
+    "page": 3
+  },
+  {
+    "de": "Stockente",
+    "tr": "Yeşilbaş Ördek",
+    "lat": "Anas platyrhynchos",
+    "page": 3
+  },
+  {
+    "de": "Lachmöwe",
+    "tr": "Karabaş Martı",
+    "lat": "Chroicocephalus ridibundus",
+    "page": 3
+  },
+  {
+    "de": "Schwarzdrossel / Amsel",
+    "tr": "Kara Tavuk",
+    "lat": "Turdus merula",
+    "page": 3
+  },
+  {
+    "de": "Nebelkrähe / Aaskrähe",
+    "tr": "Leş Kargası",
+    "lat": "Corvus corone",
+    "page": 3
+  },
+  {
+    "de": "Angelhacken",
+    "tr": "Olta Kancası, Olta İğnesi",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Kescher",
+    "tr": "Balık Kepçesi",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Setzkescher",
+    "tr": "Livar, Balık Filesi",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Ringelnatter",
+    "tr": "Yarı Sucul Yılan (Avrupada görülen zararsız tür)",
+    "lat": "Natrix natrix",
+    "page": 3
+  },
+  {
+    "de": "Röh",
+    "tr": null,
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Angeln",
+    "tr": "Olta Balıkçılığı",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Vorfach",
+    "tr": "Lider misina",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Stahlvorfach",
+    "tr": "Çelik Tel Lider",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Schnur",
+    "tr": "Olta İpi",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Monofilschnur",
+    "tr": "Naylon olta ipi",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Geflochteneschnur",
+    "tr": "Çoklu katmanlardan oluşan örgü olta ipi",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Teichlinsen",
+    "tr": "Su Mercimekleri",
+    "lat": "Spirodela",
+    "page": 3
+  },
+  {
+    "de": "Rohrkolben",
+    "tr": "Hasır Otu",
+    "lat": "Typha",
+    "page": 3
+  },
+  {
+    "de": "Weiße Seerose",
+    "tr": "Beyaz Nilüfer",
+    "lat": "Nymphaea alba",
+    "page": 3
+  },
+  {
+    "de": "Gelbe Teichrose",
+    "tr": "Sarı Nilüfer",
+    "lat": "Nuphar lutea",
+    "page": 3
+  },
+  {
+    "de": "Wasserpest",
+    "tr": "Sucul otsu bitkiler, hem su yüzeyinde hem de su altında yaşarlar. Tatlı sularda ve denizlerde bulunurlar. Farklı yapraklara sahip birçok türü vardır.",
+    "lat": "Elodea / Hydrocharitaceae",
+    "page": 3
+  },
+  {
+    "de": "Tausendblatt",
+    "tr": "Bin Yaprak. Tatlısu Bitkisi. Hem Su altında hemde suyun üzerine uzayabilen bedenleri ve çok sayıda yaprakları vardır.",
+    "lat": "Myriophyllum spicatum",
+    "page": 3
+  },
+  {
+    "de": "Wasseramsel",
+    "tr": "Dere Kuşu",
+    "lat": "Cinclus cinclus gularis",
+    "page": 3
+  },
+  {
+    "de": "Kiesgrube",
+    "tr": "Kelime anlamı Çakıl/Kum Ocağı. Olta Balıkçılığı için kullanılan anlamında ise Kum ve Çakıl çıkarılan yerlerdeki derin çukurların su ile dolması sonucu oluşan göl ve göletler kastedilir.",
+    "lat": null,
+    "page": 3
+  },
+  {
+    "de": "Wasserfrosch",
+    "tr": "Havuz Kurbağası",
+    "lat": "Pelophylax „esculentus",
+    "page": 3
+  },
+  {
+    "de": "Gelbbauchunke / Bergunke",
+    "tr": "Sarı Karınlı Kurbağa",
+    "lat": "Bombina variegata",
+    "page": 3
+  },
+  {
+    "de": "Würfelnatter",
+    "tr": "Damalı Su Yılanı",
+    "lat": "Natrix tessellata",
+    "page": 3
+  },
+  {
+    "de": null,
+    "tr": "karalardan gelenler olmak üzere, çeşitli nedenlerle besin maddelerinin büyük oranda artması sonucu, plankton ve alg",
+    "lat": null,
+    "page": 3,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "varlığının aşırı şekilde çoğalmasıdır. Bu durum sudaki çözülmüş oksijen miktarını azaltarak uzun vadede su ekosisteminin",
+    "lat": null,
+    "page": 3,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "ölümüne neden olabilir.",
+    "lat": null,
+    "page": 3,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "3",
+    "lat": null,
+    "page": 3,
+    "orphan": true
+  },
+  {
+    "de": "Kreuzotter",
+    "tr": "Bayağı Engerek",
+    "lat": "Vipera berus",
+    "page": 4
+  },
+  {
+    "de": "Libelle",
+    "tr": "Yusufçuk / Kız Böceği",
+    "lat": "Odonata",
+    "page": 4
+  },
+  {
+    "de": "Fischbrut",
+    "tr": "Balık Yumurtası (diğer adı Laich)",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Fischbesatz",
+    "tr": "Balık Salımı. Gerekli hallerde, mevcut balık nüfusunu desteklemek için yetkililer Göl ve Akarsulara Balık Salımı yapar.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Naturschutzgebiet",
+    "tr": "Doğa/Tabiat Koruma Alanı",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Brut",
+    "tr": "Kuş, Böcek ve Balıklarda genelde üç anlamda kullanılır. 1. Yumurta 2. Kuluçka evresindeki yumurtalar, 3. Yumurtadan yeni çıkmış Civcivler / yavrular.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Brutzeit",
+    "tr": "Bir Kuşun Yada Balığın üremesinde Yumurta yapmasından, kuluçkaya yatmasına/ Yumurtayı beklemesine ve Yumurtadan çıkan Yavrularını büyütme evresinde geçen zaman dilimi",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Angelrute",
+    "tr": "Olta, Olta Kamışı",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Spinnrute",
+    "tr": "Spinn Kamışı (At-çek). Yırtıcı balık avlarında kullanılan kamışlar.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Fliegenrute",
+    "tr": "Sinek Kamışı (Fly)",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Rolle",
+    "tr": "Makara, Olta Makinası, Çıkrık",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Stationärrolle",
+    "tr": "Sabit Makara. Makaranın kamışa paralel olarak sabitlendiği, ipin bir kılavuz(sarma teli) yardımı ile sarıldığı  makinelerdir.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Multirolle / Multiplikatorrolle",
+    "tr": "Çıkrık. Makara kendi etrafında döndürülerek ip sarımı gerçekleştirilir.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Nottinghamrolle",
+    "tr": "Centrepin olarakta bilinen basit, tek kasnak ve 1e 1 aktarım sağlayan bir makinadır. Türkçesine rastalanmadı.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Rutengrif",
+    "tr": "Olta Kamışında tutacak yer, Oltanın sapı",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Wurfhand",
+    "tr": "Atış Eli.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Rollenhalter",
+    "tr": "Olta Makinasının kamışa sabitlendiği yer, Makina sabitleme mekanizması",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Schnurring",
+    "tr": "Olta Halkası, Yüzük. Olta ipi bu Yüzüklerden geçirilerek kamışa eşit oranda yük dağılımı sağlanır",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Rutenschaft",
+    "tr": "Kundak. Bir Olta Kamışında Makinanın Oltaya sabitlendiği kısım",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Stippangeln",
+    "tr": "Göl Oltası ile yapılan metod. Olta ile balık tutmak denildiğinde aklımıza gelebilecek en eski yöntemi düşünelim. Bir sopa, ucunda bir ip ve devamında bir şamandıra, bir kaç kıstırma kurşun, iğne ve yem. Basit ama zevkli. Günümüzde yarışmaları yapılan, Olta makinası ve Kamışta yüzükleri olmayan modern uzun olta kamışları yapılan bir balıkçılık metodu.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Stipprute",
+    "tr": "Göl Olta Kamışı. Üzerinde porselen yüzükler yoktur. Olta Makinesi ile kullanılmazlar. Boyları çok uzundur.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Spinnfischen",
+    "tr": "Yırtıcı balık avı. Bu metod Oltacının genelde yapay yemlerle at-çek yaparak avlanmasıdır. Oltacı kullandığı yapay yemi sürekli suya atıp tekrar sararak(çekerek) avlanır.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Grundangeln",
+    "tr": "Dip Balıkçılığı. Bu metodda genelde organik bir yem taktığımız montajı suyun dibine indirip balıkların gelip yemi yemesini bekleriz.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": "Schleppangeln",
+    "tr": "Türkiyede Sırtı Çekmek, Sırtı yapmak olarak bilinir. Yapay bir balık kandırıcı yem, hareket halindeki bir teknenin arkasından çekilerek yüzdürülür.",
+    "lat": null,
+    "page": 4
+  },
+  {
+    "de": null,
+    "tr": "4",
+    "lat": null,
+    "page": 4,
+    "orphan": true
+  },
+  {
+    "de": "Fliegenfischen / Flugangeln",
+    "tr": "Sinek Balıkçılığı. İsmine bakılınca yeni başlayanlar için komik gelebilir. Ama bu metod gerçek anlamda Sinek yakalamak için yapılmıyor. Kullanılan yapay yemlerin doğadaki sinek ve böceklere benzetilerek yapıldığı için ismini buradan alır. Bu metod ile gayet başarılı Alabalık avları yapılabilir. Başka balıklar içinde uygundur. Başlı başına kendine has malzeme ve yöntemleri bulunan bir disiplindir. Oltacılar arasında Olta Balıkçılığının zirvesi olarak kabul edilir.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Angelschnur",
+    "tr": "Olta İpi",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Reißfestigkeit",
+    "tr": "Olta İpinin çekme mukavemeti. Yani kopana kadar gösterdiği dayanıklılık.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Knoten",
+    "tr": "Düğüm.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Schnurdrall",
+    "tr": "Olta İpinin gam yapması. Kendi ekseni etrafında dönen yapay yemler ile at-çek yaparken ana ip ile lider arasına fırdöndü kullanılmazsa yada direk kendinden fırdöndülü klips kullanılmazsa ip zamanla gam yapar yani burulur. Giderilmezse ip makaraya dolaşır ve arapsaçı denilen durum oluşur.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Rollenspule",
+    "tr": "Olta Makinasında ip sarılan makara",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Köder",
+    "tr": "Balık avlarında kullanılan yemlere verilen genel isim.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Kunstköder",
+    "tr": "Her türlü yapay yem/sahte.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Köderfisch",
+    "tr": "Balık Avı için kullanılan Yemlik balık. Dikkat Almanyda genel olarak kullanılan Yemlik balıklar ölü olmak zorundadır. Canlı Balık yem olarak kullanılamaz. Canlı olarak sadece Solucanlar ve Kurtcuklar kullanılabilinir.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Haken",
+    "tr": "Kanca, Olta İğnesi",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Drilling",
+    "tr": "Üç uçlu kanca",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Einzelhaken",
+    "tr": "Tekli kanca",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Plättchenhaken",
+    "tr": "Palalı kanca. Bağlama yerinde delik olmayan iğneler.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Öhrhaken",
+    "tr": "Delikli İğneler, bağlama yerinde delik olan iğneler.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Dickschenkligehaken",
+    "tr": "Kalın yapılı Olta iğnesi",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Dünnschenkligehaken",
+    "tr": "İnce yapılı Olta İğnesi",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Flachstahlhaken",
+    "tr": "Yapısı itibariyle kıvrımlı yeri dar açılı Olta İğnesi",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Rundstahlhaken",
+    "tr": "Yapısı itibariyle kıvrımlı yeri geniş açılı Olta İğnesi",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Hakenskala",
+    "tr": "Olta İğnesi büyüklük ölçeği sıralaması",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Wirbel",
+    "tr": "Fırdöndü",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Blei",
+    "tr": "Kurşun",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Laufblei",
+    "tr": "Gezer Kurşun",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Vorlaufblei / Vorschaltblei",
+    "tr": "Döner kaşık gibi yapay yemlere fazladan ağırlık sağlamak için kullanılan ve yemin önüne bağlanan kurşun ağırlık",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Rachensperre",
+    "tr": "Turna avlarında kullanılan, sahteyi çıkarmak için yakalanan Turnanın ağzını açık tutmaya yarayan alet.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Senke",
+    "tr": "Yemlik küçük balık yakalamaya yarayan ağ. Dikkat bu ağın kullanımı Almanyada birçok Eyalette yasaktır. Bu durum özel olarak Avlak izin belgelerinde belirtilir.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Netz",
+    "tr": "Ağ, Balık Ağı",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": "Spinner",
+    "tr": "Kelebek Kaşık. Metal yaprağı suda çekilirken kendi etrafında döner. Bu sayede suda oluşan ses ve basınç dalgaları ile Yırtıcı balıkların dikkatini çekmek istenir.  Ülkemizde Mepps olarak bilinir. Ancak bu tür sahteleri üreten bir markanın adıdır.",
+    "lat": null,
+    "page": 5
+  },
+  {
+    "de": null,
+    "tr": "5",
+    "lat": null,
+    "page": 5,
+    "orphan": true
+  },
+  {
+    "de": "Blinker",
+    "tr": "Kaşık. Yırtıcı Balık avlarında kullanılan özel yapıları itibari ile at-çek yapılırken suda parıltılı şekilde yansımalar yayan ve hareketleri ile bir başka balığı taklit eden metal kandırıcı.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Wobbler",
+    "tr": "Yırtıcı Balıkları yakalamaya yarayan yapay",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Pilker",
+    "tr": "Jig. Metal Yapay Balık Yemi.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Watfischen",
+    "tr": "Oltacının gerekli giysi ve malzemelerle donanarak, sığ sularda suya bel hizasına kadar girerek yaptığı spinn tarzı av metodudur. Deniz avlarında tercih edilir.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Einhand-Spinnrute",
+    "tr": "Hafif kamışlardır. Alabalık, Tatlısu Levreği gibi balıkların avları için tercih edilir. Hafif ve kısa saplı yapısı nedeni ile tek elle atış ve çekiş yapılabilen bir Spinn kamışıdır.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Unterfangkescher",
+    "tr": "Balık Kepçesi",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Zentimetermaß",
+    "tr": "Mezure, Balıkları ölçmek için kullanılan metre.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Schlagholz",
+    "tr": "Balığı bayıltmak için kullanılan sopa. Fischtöter",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Messer",
+    "tr": "Bıçak",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Hakenlöser",
+    "tr": "İğne Çıkarıcı, Balığın ağzından veya boğazından iğneyi çıkarmak için kullanılır.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Ersatzrute",
+    "tr": "Yedek Olta",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Regenzeug",
+    "tr": "Yağmurluk, Çizme vb gibi yağmurdan korunmak için kullanılan malzemeler bütünü.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Regenanzug",
+    "tr": "Yağmurluk",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Rutenhalter",
+    "tr": "Olta Tutacı, Kamış Tutucu",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Pose",
+    "tr": "Şamandıra, Mantar",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Ersatzposen",
+    "tr": "Yedek Şamandıra",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Drahtsetzkescher",
+    "tr": "Tel Livar, Tel Balık filesi",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Ersatzrolle",
+    "tr": "Olta Makinası için yedek makara",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Zweihand-Spinnrute",
+    "tr": "Turna, Sudak gibi büyük yırtıcı balık avlarında kullanılır. Sapı uzun olur bu sayede atış esnasında ve balık kıyılarken iki elle tutulabilir.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Fischwaage",
+    "tr": "Balık Terazisi, Balık Tartıcı",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Schnurführungsring",
+    "tr": "Olta Kamışı Yüzükleri, Halkaları, Poselen Halka",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Zwilinghaken",
+    "tr": "İkiz Kanca",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Friedfische",
+    "tr": "Barışçıl Balıklar. Yırtıcı olmayan Tatlısu Balıklarının tümüne verilen genel isim. Sazangiller ve benzerleri bu gruptadır.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Friedfischangeln",
+    "tr": "Barışçıl Balık avı",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Twister",
+    "tr": "Silikon Yapay yem. (Yumuşak plastik.) Kuyruk yapısı nedeni ile suyun içinde çok harketlidir. Belkide bu yüzden ingilizcede kasırga anlamına gelen Twister kullanılmıştır.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Schwingspitze",
+    "tr": "Balık vuruşlarını göstermeye yarayan, oltanın uç ince parçası yerine takılan hassas uç. Balık vurunca hemen olta ucundan anlarsınız.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Mindestmaß",
+    "tr": null,
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Satzfische",
+    "tr": null,
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": "Fischereischein",
+    "tr": "Sportif Oltacılık Ehliyeti. Angelschein olarakta bilinir.",
+    "lat": null,
+    "page": 6
+  },
+  {
+    "de": null,
+    "tr": "yem/sahte yem",
+    "lat": null,
+    "page": 6,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "Ülkemizde Rapala olarak bilinir. Ancak bu",
+    "lat": null,
+    "page": 6,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "yapay yemleri üreten bir markanın adıdır.",
+    "lat": null,
+    "page": 6,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "6",
+    "lat": null,
+    "page": 6,
+    "orphan": true
+  },
+  {
+    "de": "Fischereierlaubnisschein",
+    "tr": "Balıkçılık Avlak İzin Belgesi. Almanyada Angelschein olsa dahi bu belge olmadan birçok Avlakta av yapamazsınız. Yani ehliyetiniz var ama arabanız yok ve kiralıyorsunuz gibi. Genelde Günlük, Haftalık ve Yıllık olmak üzere Avlaklarda yetki sahibinin belirlediği bir ücret karşılığı satın alınabilir. Bu konu hakkında, bölgesel, yerel ve dernekler bazında çok farklı uygulamalar olduğu için detaya girmiyorum. Ama aklınıza takılan sorularınızı bana her zaman sorabilirisiniz.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Jugendfischereischein",
+    "tr": "En az 10 yaşında ancak henüz 16 yaşına ulaşmamış gençler, kayıtlı oldukları belediyeden gençlik balıkçılık ehliyeti alabilirler. Bu bir takvim yılı için verilir ve 18 yaşına kadar her sene uzatılabilir.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Hegepflicht",
+    "tr": "Su şartlarına uygun bir balık popülasyonunu",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Aalreusen",
+    "tr": "Yılan Balığı tuzakları",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Handangeln",
+    "tr": "El Oltası, Kasnak",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Grundblei",
+    "tr": "Yemli avlarda kullanılan Dip Kurşunu. Mesela Sazan avında kullanılan kurşun gibi.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Seitenarm",
+    "tr": "Yan Kol, Çaparideki gibi yan kollar",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Schonzeit",
+    "tr": "Kapalı Sezon. Balıkların üreyebilmesi için gerekli olan ve balık avına kapalı olan zaman dilimi.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Uferbetretungsrecht",
+    "tr": "Avlak Ulaşım Hakkı yada Kıyı Ulaşım Hakkı. Aksi belirtilmemiş ise ve Özel mülkler harici Balıkçılık izni sahiplerinin Suya sınırı olan kıyı, ada, İskele, köprü, savak, bent ve barajlara girebilmesini tayin eden kanuni haktır. Bu konu biraz tartışmalı olduğu için Balık avlamak istediğiniz yerler hakkında önceden bilgi edinmeye çalışınız.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Bezirksregierung",
+    "tr": "Hükümet Bölgesinin Yüksek İdari Makamı",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Obere Fischereibehörde",
+    "tr": "En yüksek balıkçılık makamı Çevre, Tarım, Doğa ve Tüketiciyi Koruma Bakanlığı'dır. Üst ve alt balıkçılık müdürlüklerinin teknik denetiminden sorumludur.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Landesfischereigesetz",
+    "tr": "Eyalet Balıkçılık Yasası",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Fischereiabgabe",
+    "tr": "Balıkçılık Vergisi. Eyaletlere göre farklı miktarlarda alınan ve Balıkçılık Ehliyeti alırken idari masraflara dahil edilerek tahsil edilen vergidir.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Laichschonbezirk",
+    "tr": "Yumurtlama bölgeleri balıkların, üreme alanı anlamına gelir. Her balık türü, yumurtlama mevsimi boyunca yüksek bir balık nüfusunun bulunabileceği yumurtlama alanlarını tercih eder. Balık stoklarını korumak ve yumurtlamadan önce balıkçılığı önlemek için, yetkililer yumurtlama için belirli koruma alanlarını belirler. Bu bölgelerde balıkçılık çoğunlukla 1 Nisan - 31 Mayıs arasında yasaklanmıştır.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Fischwege",
+    "tr": "Balık Yolları. Balıkların su üzerindeki barajların üst bölgelerine geçebilmelerini sağlayan düzenekler.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Grasfisch",
+    "tr": "Ot Balığı. Ot Sazanlarına verilen genel ad.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Fischereiverband Nordrhein- Westfalen e. V.",
+    "tr": "Kuzey Ren-Vestfalya Balıkçılık Derneği. V.",
+    "lat": null,
+    "page": 7
+  },
+  {
+    "de": "Hasel",
+    "tr": "Ak Balık, Tatlısu Kefalinin akrabası, Sazangillerden bir balık",
+    "lat": "Leuciscus leuciscus",
+    "page": 7
+  },
+  {
+    "de": "Ukelei",
+    "tr": "İnci Balığı",
+    "lat": "Alburnus alburnus",
+    "page": 7
+  },
+  {
+    "de": "Meerforelle",
+    "tr": "Deniz Alabalığı, Denizalası",
+    "lat": "Salmo trutta trutta",
+    "page": 7
+  },
+  {
+    "de": null,
+    "tr": "Gençlik balıkçılık lisansı ile ancak geçerli bir balıkçılık ehliyeti sahibi ile birlikte avlanabilirler. Gençlik balıkçılık ehliyetini aldıktan sonra, avlanmak için seçilen balıkçılık suları için de izin alınması gerekir. Örnek: Ren izni",
+    "lat": null,
+    "page": 7,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "koruma ve sürdürme yükümlülüğü",
+    "lat": null,
+    "page": 7,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "7",
+    "lat": null,
+    "page": 7,
+    "orphan": true
+  },
+  {
+    "de": "Landesfischereiordnung",
+    "tr": "Eyalet Balıkçılık Mevzuatı/Düzenlemeleri,",
+    "lat": null,
+    "page": 8
+  },
+  {
+    "de": "Landschaftsbehörde",
+    "tr": "Eyalet Doğa Koruma Kurumu",
+    "lat": null,
+    "page": 8
+  },
+  {
+    "de": "Malermuschel",
+    "tr": "Ressam Midyesi (Türkçesi bulunamadığı için ingilizce ve almanca isimlerinden yola çıkarak bu ismi verdim)",
+    "lat": "Unio pictorum",
+    "page": 8
+  },
+  {
+    "de": "Europäischen Flusskrebs /",
+    "tr": "Avrupa Kereviti, Asil Kerevit",
+    "lat": "Astacus astacus",
+    "page": 8
+  },
+  {
+    "de": "Edelkrebs",
+    "tr": null,
+    "lat": null,
+    "page": 8
+  },
+  {
+    "de": "Signalkrebs",
+    "tr": "Sinyal Kereviti",
+    "lat": "Pacifastacus leniusculus",
+    "page": 8
+  },
+  {
+    "de": "Flusskrebs",
+    "tr": "Kerevit",
+    "lat": "Taxon Bkz. Wikipedi",
+    "page": 8
+  },
+  {
+    "de": "Gewässer",
+    "tr": "İç Sular. Tatlısudan bahsedildiğinde Akarsular, Göl ve Göletlerin tümüne verilen ortak isim.",
+    "lat": null,
+    "page": 8
+  },
+  {
+    "de": "Binnengewässer",
+    "tr": "Anakara üzerindeki ve etrafındaki akan veya duran suların bütünü, Denizler hariç",
+    "lat": null,
+    "page": 8
+  },
+  {
+    "de": null,
+    "tr": "Yönetmeliği",
+    "lat": null,
+    "page": 8,
+    "orphan": true
+  },
+  {
+    "de": null,
+    "tr": "8",
+    "lat": null,
+    "page": 8,
+    "orphan": true
+  }
+]
