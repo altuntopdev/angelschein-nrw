@@ -15,6 +15,8 @@ class VoiceCommandsTest {
             "videoyu başlat",
             "çekimi başlat",
             "başlat",
+            "kayıt",
+            "kaydı",
         ).forEach {
             assertEquals("\"$it\"", VoiceCommand.START, VoiceCommands.commandIn(it))
         }

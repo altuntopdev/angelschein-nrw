@@ -1,9 +1,13 @@
 # VoiceCam — sesli komutla video kaydı
 
-Tek ekranlık, bağımsız bir Android uygulaması: kamera önizlemesi açık durur,
-mikrofonu sürekli dinler ve **“kayıt başlat”** dediğinde video kaydını başlatır,
-**“durdur”** dediğinde bitirir. Video `Movies/VoiceCam` klasörüne MP4 olarak
-kaydedilir (galeride görünür).
+Bağımsız bir Android uygulaması: bir kere “Dinlemeyi başlat” dedikten sonra
+**ekran kapalıyken de** dinlemeye devam eder ve **“kayıt”** dediğinde video
+kaydını başlatır, **“durdur”** dediğinde bitirir. Video `Movies/VoiceCam`
+klasörüne MP4 olarak kaydedilir (galeride görünür).
+
+Ekranda önizleme yoktur — amaç telefon cepteyken/kilitliyken çalışması. Dinleme
+ve kayıt bir ön plan servisinde yapılır; durum bildirim çubuğunda görünür ve
+oradan da başlatıp durdurabilirsin.
 
 Bu klasör, depodaki Flutter uygulamasından tamamen ayrı bir Gradle projesidir;
 Flutter tarafına hiçbir şey eklemez.
@@ -12,7 +16,7 @@ Flutter tarafına hiçbir şey eklemez.
 
 | Ne dersen | Ne olur |
 | --- | --- |
-| kayıt başlat · kaydı başlat · kayda başla · videoyu başlat · çekimi başlat · başlat | Kayıt başlar |
+| **kayıt** · kaydı · kayıt başlat · kayda başla · videoyu başlat · başlat · kaydet | Kayıt başlar |
 | kaydı durdur · kayıt durdur · kaydı bitir · durdur · dur · bitir | Kayıt biter, dosya kaydedilir |
 
 İngilizce `start recording` / `stop recording` de çalışır. Eşleştirme Türkçe
@@ -22,14 +26,20 @@ bakılır, böylece “kayıt durdur” yanlışlıkla başlatma sayılmaz.
 
 ## Mikrofon ikilemi (önemli)
 
-Android’de mikrofonu aynı anda tek uygulama/bileşen kullanabilir. Konuşma tanıma
-da, sesli video kaydı da mikrofonu ister. Bu yüzden ekranda bir anahtar var:
+Android’de mikrofonu aynı anda tek taraf kullanabilir; konuşma tanıma da sesli
+video kaydı da onu ister. Varsayılan: video **sessiz** kaydedilir, mikrofon
+dinlemede kalır, yani “durdur” çalışır. “Videoyu sesli kaydet” anahtarını
+açarsan ses kaydedilir ama kayıt boyunca dinleme durur — kaydı bildirimdeki
+düğmeyle bitirirsin.
 
-- **Kayıt sırasında da dinle (varsayılan, açık):** video **sessiz** kaydedilir,
-  mikrofon konuşma tanımada kalır → kaydı sesle de durdurabilirsin. Tam eller
-  serbest kullanım budur.
-- **Kapalı:** video **sesli** kaydedilir, kayıt boyunca dinleme durur → kaydı
-  ekrandaki düğmeyle bitirirsin. Başlatma yine sesle yapılabilir.
+## Bip sesleri
+
+Android’in konuşma tanıyıcısı her dinleme turunda bip çalar; sürekli dinlemede
+bu rahatsız edici oluyordu. İki önlem var: Android 12+ cihazlarda önce
+**cihaz üstü** tanıyıcı denenir (bu bip çalmaz, dili yoksa sistem tanıyıcısına
+düşülür), ayrıca dinleme boyunca bip’in çıktığı ses kanalları (medya, sistem,
+bildirim) sessize alınır — dinleme kapanınca geri açılır. Zil ve alarm kanalına
+dokunulmaz, çağrıları kaçırmazsın.
 
 ## Kurulum
 
@@ -60,8 +70,11 @@ zaten cihaz üzerinde çalışır, yoksa internet gerekir.
 
 ## Nasıl çalışıyor
 
-- `MainActivity.kt` — CameraX önizleme + `VideoCapture`, MediaStore’a kayıt,
-  izinler, kayıt sayacı, ekran açık tutma, cihaz yönüne göre video rotasyonu.
+- `VoiceCamService.kt` — ön plan servisi (kamera + mikrofon tipi): CameraX
+  `VideoCapture` (önizleme yok), MediaStore’a kayıt, bildirim, cihaz yönüne göre
+  video rotasyonu. Servis uygulama ekrandayken başlatıldığı için ekran kapanınca
+  da kamera/mikrofon erişimini korur.
+- `MainActivity.kt` — sadece kontrol paneli: izinler, servisi başlat/durdur.
 - `VoiceCommander.kt` — `SpeechRecognizer`’ı bir döngüde tutar (tanıyıcı her
   cümleden sonra kendini kapattığı için sonuç/hata sonrası yeniden başlatılır;
   hatalarda artan bekleme ile). Kısmi sonuçlara da bakar, böylece komut cümle
@@ -72,12 +85,14 @@ zaten cihaz üzerinde çalışır, yoksa internet gerekir.
 
 ## Sınırlar
 
-- Uygulama ön planda olduğu sürece çalışır. Arka plana alınca mikrofon bırakılır
-  ve kayıt sonlanır — arka planda dinleyen bir foreground service bilerek
-  eklenmedi (sürekli dinleme pil tüketir ve bildirim gerektirir).
-- Sürekli dinleme, tanıma servisini aralıksız çalıştırdığı için pili normalden
-  hızlı tüketir.
-- Arka kamera kullanılır; ön kameraya geçiş yok.
+- Sürekli dinleme pili normalden hızlı tüketir; ayrıca bazı telefonlar arka
+  plandaki uygulamayı öldürür — uygulamadaki “Pil optimizasyonunu kapat”
+  düğmesinden VoiceCam’i listeden çıkar.
+- Dinleme sırasında medya/sistem/bildirim sesleri sessize alınır (bip’leri
+  bastırmak için); müzik dinlerken kullanmaya uygun değil.
+- Servis ekran açıkken, uygulamanın içinden başlatılmalı — Android arka plandan
+  kamera/mikrofon servisi başlatılmasına izin vermiyor.
+- Arka kamera kullanılır; ön kameraya geçiş yok. Önizleme yok.
 
 ## Bu ortamda ne doğrulandı
 

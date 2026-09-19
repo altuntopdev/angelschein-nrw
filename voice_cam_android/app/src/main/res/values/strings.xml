@@ -2,25 +2,32 @@
 <resources>
     <string name="app_name">VoiceCam</string>
 
+    <string name="status_off">Kapalı</string>
     <string name="status_listening">🎙 Dinliyor…</string>
-    <string name="status_mic_off">Mikrofon kapalı</string>
+    <string name="status_recording">🔴 Kayıtta</string>
     <string name="heard">Duydum: %1$s</string>
 
-    <string name="hands_free_switch">Kayıt sırasında da dinle (video sessiz olur)</string>
+    <string name="start_listening">Dinlemeyi başlat</string>
+    <string name="stop_listening">Dinlemeyi kapat</string>
     <string name="start_recording">Kaydı başlat</string>
     <string name="stop_recording">Kaydı durdur</string>
-    <string name="mic_on">Mikrofon: açık</string>
-    <string name="mic_off">Mikrofon: kapalı</string>
+    <string name="quit">Kapat</string>
 
-    <string name="hint_hands_free">“kayıt başlat” ile başlat, “durdur” ile bitir. Video sesli kaydedilmez.</string>
-    <string name="hint_audio">“kayıt başlat” ile başlat. Video sesli kaydedilir, bu yüzden bitirmek için düğmeye bas.</string>
-    <string name="hint_recording_hands_free">Kayıtta — “durdur” de ya da düğmeye bas.</string>
-    <string name="hint_recording_audio">Kayıtta (sesli) — bitirmek için düğmeye bas.</string>
+    <string name="usage_hint">Dinlemeyi başlattıktan sonra ekranı kapatabilir, uygulamadan çıkabilirsin. “kayıt” dediğinde video kaydı başlar, “durdur” dediğinde biter. Video Movies/VoiceCam klasörüne kaydedilir.</string>
 
-    <string name="recording_timer">● %1$02d:%2$02d</string>
-    <string name="recording_saved">Video kaydedildi (Movies/VoiceCam).</string>
+    <string name="audio_switch">Videoyu sesli kaydet</string>
+    <string name="audio_switch_hint">Kapalıyken video sessiz olur ama “durdur” komutunu duyabilir. Açarsan ses kaydedilir, kaydı durdurmak için bildirimdeki düğmeyi kullanman gerekir.</string>
+
+    <string name="battery_button">Pil optimizasyonunu kapat</string>
+    <string name="battery_hint">Telefon uygulamayı arka planda öldürmesin diye VoiceCam’i pil optimizasyonundan çıkar.</string>
+    <string name="battery_settings_missing">Bu ayar ekranı bu telefonda yok.</string>
+
+    <string name="channel_name">Dinleme</string>
+    <string name="notif_listening">Dinliyor — “kayıt” de</string>
+    <string name="notif_recording">Video kaydediliyor</string>
+    <string name="notif_hint">Ekran kapalıyken de çalışır</string>
+
     <string name="recording_failed">Kayıt başarısız (hata %1$d).</string>
-
     <string name="error_no_recognizer">Bu cihazda konuşma tanıma yok. Google uygulamasını/ses hizmetini kur.</string>
     <string name="error_mic">Mikrofona erişilemedi.</string>
     <string name="error_permission">Kamera ve mikrofon izni gerekli.</string>

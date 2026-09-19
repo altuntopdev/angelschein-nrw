@@ -2,6 +2,8 @@ package com.altuntopdev.voicecam
 
 import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -14,8 +16,11 @@ import android.speech.SpeechRecognizer
  *
  * Android's recognizer only ever handles one utterance and then stops, so every
  * result/error is followed by a restart. Errors get a small backoff to avoid
- * hammering the recognition service when it is unavailable (no network for the
- * online engine, another app holding the mic, ...).
+ * hammering the recognition service when it is unavailable.
+ *
+ * Two things keep the loop quiet: the on-device recognizer is preferred (it
+ * does not play the start/stop earcons the network one does), and the streams
+ * those earcons come out of are muted while listening.
  */
 class VoiceCommander(
     private val context: Context,
@@ -33,6 +38,7 @@ class VoiceCommander(
     }
 
     private val main = Handler(Looper.getMainLooper())
+    private val audio = context.getSystemService(AudioManager::class.java)
     private var recognizer: SpeechRecognizer? = null
 
     /** True between [start] and [stop] — not "the mic is open right now". */
@@ -42,6 +48,10 @@ class VoiceCommander(
     private var failureStreak = 0
     private var lastCommand: VoiceCommand? = null
     private var lastCommandAt = 0L
+    private var muted = false
+
+    /** Set once the on-device engine says it has no model for [language]. */
+    private var useSystemRecognizer = false
 
     private val restart = Runnable { listenOnce() }
 
@@ -53,9 +63,8 @@ class VoiceCommander(
         }
         isActive = true
         failureStreak = 0
-        recognizer = SpeechRecognizer.createSpeechRecognizer(context).also {
-            it.setRecognitionListener(this)
-        }
+        muteBeeps()
+        createRecognizer()
         listenOnce()
     }
 
@@ -63,17 +72,38 @@ class VoiceCommander(
         if (!isActive) return
         isActive = false
         main.removeCallbacks(restart)
-        recognizer?.let {
-            it.cancel()
-            it.destroy()
-        }
-        recognizer = null
+        destroyRecognizer()
+        unmuteBeeps()
         onStatus(Status.Stopped)
     }
 
     fun destroy() {
         stop()
         main.removeCallbacksAndMessages(null)
+        // Belt and braces: never leave the phone muted behind us.
+        unmuteBeeps()
+    }
+
+    private fun createRecognizer() {
+        destroyRecognizer()
+        val fresh = if (!useSystemRecognizer &&
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
+            SpeechRecognizer.isOnDeviceRecognitionAvailable(context)
+        ) {
+            SpeechRecognizer.createOnDeviceSpeechRecognizer(context)
+        } else {
+            SpeechRecognizer.createSpeechRecognizer(context)
+        }
+        fresh.setRecognitionListener(this)
+        recognizer = fresh
+    }
+
+    private fun destroyRecognizer() {
+        recognizer?.let {
+            it.cancel()
+            it.destroy()
+        }
+        recognizer = null
     }
 
     private fun listenOnce() {
@@ -86,10 +116,16 @@ class VoiceCommander(
             putExtra(RecognizerIntent.EXTRA_LANGUAGE, language)
             putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, true)
             putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, context.packageName)
-            // EXTRA_PREFER_OFFLINE is deliberately not set: engines that have no
-            // offline pack for the language answer it with ERROR_NO_MATCH
-            // instead of falling back. With the Turkish offline pack installed
-            // the recognizer already runs on-device on its own.
+            // Longer silence windows mean fewer restarts, and every restart is a
+            // chance for the engine to make a noise.
+            putExtra(
+                RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS,
+                2_000L,
+            )
+            putExtra(
+                RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS,
+                2_000L,
+            )
         }
         try {
             recognizer?.startListening(intent)
@@ -103,6 +139,29 @@ class VoiceCommander(
         if (!isActive) return
         main.removeCallbacks(restart)
         main.postDelayed(restart, delayMs)
+    }
+
+    // --- Beeps ---------------------------------------------------------------
+
+    /**
+     * The recognizer's earcons come out of the media/system/notification
+     * streams, depending on the device. Muting the ring and alarm streams too
+     * would hide calls, so those are left alone.
+     */
+    private fun muteBeeps() {
+        if (muted) return
+        BEEP_STREAMS.forEach { stream ->
+            runCatching { audio.adjustStreamVolume(stream, AudioManager.ADJUST_MUTE, 0) }
+        }
+        muted = true
+    }
+
+    private fun unmuteBeeps() {
+        if (!muted) return
+        BEEP_STREAMS.forEach { stream ->
+            runCatching { audio.adjustStreamVolume(stream, AudioManager.ADJUST_UNMUTE, 0) }
+        }
+        muted = false
     }
 
     // --- RecognitionListener -------------------------------------------------
@@ -129,9 +188,17 @@ class VoiceCommander(
     }
 
     override fun onError(error: Int) {
+        // The on-device engine has no model for this language — fall back to the
+        // system one for good, even though it is the chattier of the two.
+        if (!useSystemRecognizer && error in LANGUAGE_ERRORS) {
+            useSystemRecognizer = true
+            createRecognizer()
+            scheduleRestart(RESTART_DELAY_MS)
+            return
+        }
+
         val delay = when (error) {
-            // Nothing was said — that is the normal case for an always-on
-            // listener, so loop straight back around.
+            // Nothing was said — the normal case for an always-on listener.
             SpeechRecognizer.ERROR_NO_MATCH,
             SpeechRecognizer.ERROR_SPEECH_TIMEOUT,
             -> RESTART_DELAY_MS
@@ -187,5 +254,14 @@ class VoiceCommander(
         private const val BUSY_DELAY_MS = 800L
         private const val MAX_BACKOFF_MS = 5_000L
         private const val COMMAND_DEBOUNCE_MS = 2_500L
+
+        private val BEEP_STREAMS = intArrayOf(
+            AudioManager.STREAM_MUSIC,
+            AudioManager.STREAM_SYSTEM,
+            AudioManager.STREAM_NOTIFICATION,
+        )
+
+        /** ERROR_LANGUAGE_NOT_SUPPORTED / ERROR_LANGUAGE_UNAVAILABLE (API 33). */
+        private val LANGUAGE_ERRORS = setOf(12, 13)
     }
 }

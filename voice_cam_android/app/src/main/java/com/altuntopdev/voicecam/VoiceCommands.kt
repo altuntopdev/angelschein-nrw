@@ -18,7 +18,8 @@ object VoiceCommands {
     private val START_PHRASES = listOf(
         "kayit baslat", "kaydi baslat", "kayda basla", "kayit basla",
         "video baslat", "videoyu baslat", "cekimi baslat", "cekime basla",
-        "baslat", "basla", "kaydet", "start recording", "start", "record",
+        "baslat", "basla", "kayit", "kaydi", "kaydet",
+        "start recording", "start", "record",
     )
 
     private val STOP_PHRASES = listOf(
