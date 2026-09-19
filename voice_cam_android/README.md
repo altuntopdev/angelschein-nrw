@@ -45,6 +45,13 @@ cd voice_cam_android
 
 Gerekenler: JDK 17, Android SDK (compileSdk 36), minSdk 24 (Android 7.0+).
 
+Bilgisayarına Android SDK kurmak istemiyorsan: depodaki
+`.github/workflows/voicecam-apk.yml` iş akışını GitHub’da **Actions → VoiceCam
+APK → Run workflow** ile çalıştır; testleri koşar, debug APK’yı üretir ve
+çalışmanın **Artifacts** bölümüne `voicecam-debug-apk` olarak koyar. Zip’i indir,
+içindeki `app-debug.apk`’yı telefona at ve “bilinmeyen kaynaklara izin ver”
+diyerek kur.
+
 İlk açılışta kamera ve mikrofon izni sorar. Konuşma tanıma için cihazda bir
 tanıma servisi (çoğu telefonda Google uygulaması) kurulu olmalı. İnternetsiz
 çalışması için **Ayarlar → Sistem → Diller ve giriş → Sesle yazma → Çevrimdışı
