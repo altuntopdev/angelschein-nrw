@@ -1,0 +1,6 @@
+<!-- Circle behind the mic glyph; its colour is set in code per state. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/state_idle" />
+    <size android:width="72dp" android:height="72dp" />
+</shape>

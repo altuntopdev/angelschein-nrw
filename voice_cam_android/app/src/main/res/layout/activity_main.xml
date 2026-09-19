@@ -1,77 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp">
 
         <TextView
-            android:id="@+id/statusText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:text="@string/status_off"
-            tools:text="🎙 Dinliyor…" />
+            android:text="@string/app_name"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="28sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/heardText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textSize="14sp"
-            tools:text="Duydum: kayıt" />
+            android:layout_marginTop="2dp"
+            android:text="@string/tagline"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="14sp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/toggleButton"
+        <!-- State -->
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:paddingTop="14dp"
-            android:paddingBottom="14dp"
-            android:textSize="18sp"
-            android:text="@string/start_listening" />
+            app:cardBackgroundColor="?attr/colorSurfaceVariant"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <ImageView
+                    android:id="@+id/statusIcon"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/bg_status_icon"
+                    android:contentDescription="@string/status_off"
+                    android:padding="18dp"
+                    android:src="@drawable/ic_mic"
+                    app:tint="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/status_off"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="Dinliyor" />
+
+                <TextView
+                    android:id="@+id/heardText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:textSize="14sp"
+                    tools:text="Duydum: kayıt" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toggleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/start_listening"
+                    android:textSize="17sp"
+                    app:cornerRadius="30dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Commands -->
+        <TextView
+            style="@style/VoiceCam.SectionTitle"
+            android:text="@string/section_commands" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/VoiceCam.Card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    style="@style/VoiceCam.Command"
+                    android:text="@string/command_start" />
+
+                <TextView
+                    style="@style/VoiceCam.CommandHint"
+                    android:text="@string/command_start_hint" />
+
+                <TextView
+                    style="@style/VoiceCam.Command"
+                    android:layout_marginTop="14dp"
+                    android:text="@string/command_stop" />
+
+                <TextView
+                    style="@style/VoiceCam.CommandHint"
+                    android:text="@string/command_stop_hint" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Settings -->
+        <TextView
+            style="@style/VoiceCam.SectionTitle"
+            android:text="@string/section_settings" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/VoiceCam.Card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/saverSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/saver_switch"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/VoiceCam.CommandHint"
+                    android:text="@string/saver_switch_hint" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="?attr/colorOnSurfaceVariant"
+                    android:alpha="0.15" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/audioSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/audio_switch"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/VoiceCam.CommandHint"
+                    android:text="@string/audio_switch_hint" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/batteryButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/battery_button" />
+
+                <TextView
+                    style="@style/VoiceCam.CommandHint"
+                    android:text="@string/battery_hint" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:textSize="15sp"
-            android:lineSpacingExtra="4dp"
-            android:text="@string/usage_hint" />
-
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/audioSwitch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/audio_switch" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textSize="13sp"
-            android:text="@string/audio_switch_hint" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/batteryButton"
-            style="@style/Widget.Material3.Button.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/battery_button" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textSize="13sp"
-            android:text="@string/battery_hint" />
+            android:layout_marginTop="20dp"
+            android:text="@string/footer_hint"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="13sp" />
     </LinearLayout>
 </ScrollView>

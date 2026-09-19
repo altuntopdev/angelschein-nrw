@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">VoiceCam</string>
+    <string name="tagline">Sesli komutla video kaydı</string>
 
     <string name="status_off">Kapalı</string>
-    <string name="status_listening">🎙 Dinliyor…</string>
-    <string name="status_recording">🔴 Kayıtta</string>
-    <string name="heard">Duydum: %1$s</string>
+    <string name="status_listening">Dinliyor</string>
+    <string name="status_paused">Kısa mola (pil tasarrufu)</string>
+    <string name="status_recording">Kaydediyor</string>
+    <string name="heard">“%1$s”</string>
 
     <string name="start_listening">Dinlemeyi başlat</string>
     <string name="stop_listening">Dinlemeyi kapat</string>
@@ -13,17 +15,29 @@
     <string name="stop_recording">Kaydı durdur</string>
     <string name="quit">Kapat</string>
 
-    <string name="usage_hint">Dinlemeyi başlattıktan sonra ekranı kapatabilir, uygulamadan çıkabilirsin. “kayıt” dediğinde video kaydı başlar, “durdur” dediğinde biter. Video Movies/VoiceCam klasörüne kaydedilir.</string>
+    <string name="section_commands">KOMUTLAR</string>
+    <string name="command_start">“kayıt”</string>
+    <string name="command_start_hint">Video kaydını başlatır. “kayıt başlat”, “kayda başla”, “başlat” da olur.</string>
+    <string name="command_stop">“durdur”</string>
+    <string name="command_stop_hint">Kaydı bitirir ve videoyu Movies/VoiceCam klasörüne kaydeder. “kaydı durdur”, “bitir” de olur.</string>
+
+    <string name="section_settings">AYARLAR</string>
+    <string name="saver_switch">Pil tasarrufu</string>
+    <string name="saver_switch_hint">Ekran kapalıyken 12 saniye dinler, 6 saniye mola verir. Komutu duymazsa bir daha söyle. Kamera da sadece kayıt sırasında açılır.</string>
 
     <string name="audio_switch">Videoyu sesli kaydet</string>
-    <string name="audio_switch_hint">Kapalıyken video sessiz olur ama “durdur” komutunu duyabilir. Açarsan ses kaydedilir, kaydı durdurmak için bildirimdeki düğmeyi kullanman gerekir.</string>
+    <string name="audio_switch_hint">Mikrofonu aynı anda tek taraf kullanabilir: ses açıkken “durdur” komutu duyulmaz, kaydı bildirimdeki düğmeyle bitirirsin.</string>
 
-    <string name="battery_button">Pil optimizasyonunu kapat</string>
-    <string name="battery_hint">Telefon uygulamayı arka planda öldürmesin diye VoiceCam’i pil optimizasyonundan çıkar.</string>
+    <string name="battery_button">Pil optimizasyonundan çıkar</string>
+    <string name="battery_hint">Telefon uygulamayı arka planda öldürmesin diye listeden VoiceCam’i kısıtlamasız yap.</string>
+
+    <string name="footer_hint">Dinlemeyi başlattıktan sonra ekranı kapatabilir, uygulamadan çıkabilirsin. Telefonu yeniden başlatırsan uygulamayı açıp yeniden başlat.</string>
+
     <string name="battery_settings_missing">Bu ayar ekranı bu telefonda yok.</string>
 
     <string name="channel_name">Dinleme</string>
     <string name="notif_listening">Dinliyor — “kayıt” de</string>
+    <string name="notif_paused">Pil tasarrufu molası</string>
     <string name="notif_recording">Video kaydediliyor</string>
     <string name="notif_hint">Ekran kapalıyken de çalışır</string>
 

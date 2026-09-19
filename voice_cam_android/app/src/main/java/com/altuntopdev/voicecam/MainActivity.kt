@@ -1,7 +1,9 @@
 package com.altuntopdev.voicecam
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -20,10 +22,13 @@ import com.altuntopdev.voicecam.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(), VoiceCamService.Listener {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var prefs: SharedPreferences
 
     private val permissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions(),
     ) { granted ->
+        // A denied notification permission costs us the status notification,
+        // not the feature, so it does not block the start.
         if (granted.filterKeys { it != Manifest.permission.POST_NOTIFICATIONS }
                 .all { it.value }
         ) {
@@ -37,6 +42,17 @@ class MainActivity : AppCompatActivity(), VoiceCamService.Listener {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        prefs = getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+        binding.audioSwitch.isChecked = prefs.getBoolean(KEY_AUDIO, false)
+        binding.saverSwitch.isChecked = prefs.getBoolean(KEY_SAVER, true)
+
+        binding.audioSwitch.setOnCheckedChangeListener { _, checked ->
+            prefs.edit().putBoolean(KEY_AUDIO, checked).apply()
+        }
+        binding.saverSwitch.setOnCheckedChangeListener { _, checked ->
+            prefs.edit().putBoolean(KEY_SAVER, checked).apply()
+        }
 
         binding.toggleButton.setOnClickListener {
             if (VoiceCamService.running) {
@@ -71,7 +87,11 @@ class MainActivity : AppCompatActivity(), VoiceCamService.Listener {
     }
 
     private fun startService() {
-        VoiceCamService.start(this, withAudio = binding.audioSwitch.isChecked)
+        VoiceCamService.start(
+            context = this,
+            withAudio = binding.audioSwitch.isChecked,
+            powerSaving = binding.saverSwitch.isChecked,
+        )
         binding.root.postDelayed(::render, 300)
     }
 
@@ -81,18 +101,43 @@ class MainActivity : AppCompatActivity(), VoiceCamService.Listener {
             ContextCompat.checkSelfPermission(this, it) == PackageManager.PERMISSION_GRANTED
         }
 
-    private fun render() {
-        val running = VoiceCamService.running
-        binding.toggleButton.setText(if (running) R.string.stop_listening else R.string.start_listening)
-        binding.statusText.setText(if (running) R.string.status_listening else R.string.status_off)
+    private fun render() = showState(
+        running = VoiceCamService.running,
+        listening = VoiceCamService.running,
+        recording = false,
+    )
+
+    private fun showState(running: Boolean, listening: Boolean, recording: Boolean) {
+        binding.toggleButton.setText(
+            if (running) R.string.stop_listening else R.string.start_listening,
+        )
+        binding.statusText.setText(
+            when {
+                !running -> R.string.status_off
+                recording -> R.string.status_recording
+                listening -> R.string.status_listening
+                else -> R.string.status_paused
+            },
+        )
+        val state = when {
+            !running -> R.color.state_idle
+            recording -> R.color.state_recording
+            listening -> R.color.state_listening
+            else -> R.color.state_idle
+        }
+        binding.statusIcon.backgroundTintList =
+            ContextCompat.getColorStateList(this, state)
+        // The switches describe how the service was started, so they are frozen
+        // while it runs.
         binding.audioSwitch.isEnabled = !running
+        binding.saverSwitch.isEnabled = !running
+        if (!running) binding.heardText.text = ""
     }
 
     // --- VoiceCamService.Listener --------------------------------------------
 
     override fun onStateChanged(listening: Boolean, recording: Boolean) = runOnUiThread {
-        render()
-        if (recording) binding.statusText.setText(R.string.status_recording)
+        showState(VoiceCamService.running, listening, recording)
     }
 
     override fun onHeard(text: String) = runOnUiThread {
@@ -107,7 +152,6 @@ class MainActivity : AppCompatActivity(), VoiceCamService.Listener {
         add(Manifest.permission.CAMERA)
         add(Manifest.permission.RECORD_AUDIO)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            // Only for the ongoing notification; denying it must not block the app.
             add(Manifest.permission.POST_NOTIFICATIONS)
         }
         // Before scoped storage, MediaStore writes still need the file permission.
@@ -115,4 +159,10 @@ class MainActivity : AppCompatActivity(), VoiceCamService.Listener {
             add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
         }
     }.toTypedArray()
+
+    private companion object {
+        const val PREFS = "voicecam"
+        const val KEY_AUDIO = "with_audio"
+        const val KEY_SAVER = "power_saving"
+    }
 }
