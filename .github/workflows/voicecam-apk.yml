@@ -20,7 +20,12 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      # packages: '' skips the action's default "tools" package, which the
+      # current command-line tools no longer ship; the SDK bits the build needs
+      # are fetched by Gradle once the licenses are accepted.
       - uses: android-actions/setup-android@v3
+        with:
+          packages: ''
 
       - name: Unit tests
         working-directory: voice_cam_android
