@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VoiceCam</string>
+
+    <string name="status_listening">🎙 Dinliyor…</string>
+    <string name="status_mic_off">Mikrofon kapalı</string>
+    <string name="heard">Duydum: %1$s</string>
+
+    <string name="hands_free_switch">Kayıt sırasında da dinle (video sessiz olur)</string>
+    <string name="start_recording">Kaydı başlat</string>
+    <string name="stop_recording">Kaydı durdur</string>
+    <string name="mic_on">Mikrofon: açık</string>
+    <string name="mic_off">Mikrofon: kapalı</string>
+
+    <string name="hint_hands_free">“kayıt başlat” ile başlat, “durdur” ile bitir. Video sesli kaydedilmez.</string>
+    <string name="hint_audio">“kayıt başlat” ile başlat. Video sesli kaydedilir, bu yüzden bitirmek için düğmeye bas.</string>
+    <string name="hint_recording_hands_free">Kayıtta — “durdur” de ya da düğmeye bas.</string>
+    <string name="hint_recording_audio">Kayıtta (sesli) — bitirmek için düğmeye bas.</string>
+
+    <string name="recording_timer">● %1$02d:%2$02d</string>
+    <string name="recording_saved">Video kaydedildi (Movies/VoiceCam).</string>
+    <string name="recording_failed">Kayıt başarısız (hata %1$d).</string>
+
+    <string name="error_no_recognizer">Bu cihazda konuşma tanıma yok. Google uygulamasını/ses hizmetini kur.</string>
+    <string name="error_mic">Mikrofona erişilemedi.</string>
+    <string name="error_permission">Kamera ve mikrofon izni gerekli.</string>
+    <string name="error_network">Ağ yok — çevrimdışı Türkçe dil paketini kur.</string>
+    <string name="error_server">Konuşma sunucusu hata verdi.</string>
+    <string name="error_generic">Konuşma tanıma hatası, yeniden deneniyor…</string>
+    <string name="error_camera">Kamera açılamadı: %1$s</string>
+</resources>

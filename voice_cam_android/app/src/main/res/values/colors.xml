@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="scrim">#A6000000</color>
+    <color name="subtle_text">#CCCCCC</color>
+    <color name="recording_red">#FF5252</color>
+    <color name="ic_launcher_background">#1E3A5F</color>
+</resources>

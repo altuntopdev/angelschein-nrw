@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Camera body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,40h8l4,-6h16l4,6h8a6,6 0 0 1 6,6v24a6,6 0 0 1 -6,6H34a6,6 0 0 1 -6,-6V46a6,6 0 0 1 6,-6z" />
+    <!-- Lens -->
+    <path
+        android:fillColor="#1E3A5F"
+        android:pathData="M54,44m-13,0a13,13 0 1 0 26,0a13,13 0 1 0 -26,0" />
+    <!-- Mic inside the lens -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,50a4,4 0 0 0 4,-4v-8a4,4 0 0 0 -8,0v8a4,4 0 0 0 4,4zM61,46a7,7 0 0 1 -14,0h-3a10,10 0 0 0 9,9.8V60h4v-4.2a10,10 0 0 0 9,-9.8z" />
+</vector>
