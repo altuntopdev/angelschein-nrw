@@ -26,18 +26,28 @@ Future<void> launchQuiz(
   required List<ExamQuestion> Function() buildFreshQuestions,
   Duration? timeLimit,
 }) async {
-  await _launchQuiz(
-    context,
-    mode: mode,
-    categorySlug: categorySlug,
-    title: title,
-    buildFreshQuestions: buildFreshQuestions,
-    timeLimit: timeLimit,
-  );
+  // A second tap while the first launch is still checking for a saved
+  // session would stack two quiz screens on top of each other.
+  if (_launching) return;
+  _launching = true;
+  try {
+    await _launchQuiz(
+      context,
+      mode: mode,
+      categorySlug: categorySlug,
+      title: title,
+      buildFreshQuestions: buildFreshQuestions,
+      timeLimit: timeLimit,
+    );
+  } finally {
+    _launching = false;
+  }
   if (context.mounted) {
     await context.read<MissedQuestionsController>().refresh();
   }
 }
+
+bool _launching = false;
 
 Future<void> _launchQuiz(
   BuildContext context, {
@@ -60,17 +70,19 @@ Future<void> _launchQuiz(
       // Content changed underneath this saved session (shouldn't normally
       // happen) — it can't be resumed, so drop it quietly and start fresh.
       await progress.discardSession(saved.id);
-    } else if (saved.results.length >= resumedQuestions.length) {
+    } else if (saved.results.length >= resumedQuestions.length || saved.currentIndex >= resumedQuestions.length) {
       // Every question was already answered but the app closed before the
       // session could be marked complete — just show the result.
       await progress.completeSession(saved.id);
       if (!context.mounted) return;
+      _launching = false; // the quiz screen now owns input; the guard only covers the saved-session check
       await Navigator.of(context).push(MaterialPageRoute(
         builder: (_) => QuizResultScreen(questions: resumedQuestions, results: saved.results),
       ));
       return;
     } else {
       if (!context.mounted) return;
+      _launching = false;
       final action = await showDialog<_ResumeAction>(
         context: context,
         builder: (ctx) => AlertDialog(
@@ -94,6 +106,7 @@ Future<void> _launchQuiz(
 
       if (action == _ResumeAction.resume) {
         if (!context.mounted) return;
+        _launching = false; // the quiz screen now owns input; the guard only covers the saved-session check
         await Navigator.of(context).push(MaterialPageRoute(
           builder: (_) => QuizScreen(
             title: title,
@@ -118,10 +131,18 @@ Future<void> _launchQuiz(
   }
 
   if (!context.mounted) return;
+  final questions = buildFreshQuestions();
+  if (questions.isEmpty) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(context.uiRead(tr: 'Bu bölümde soru bulunamadı.', de: 'In diesem Bereich wurden keine Fragen gefunden.')),
+    ));
+    return;
+  }
+  _launching = false; // the quiz screen now owns input; the guard only covers the saved-session check
   await Navigator.of(context).push(MaterialPageRoute(
     builder: (_) => QuizScreen(
       title: title,
-      questions: buildFreshQuestions(),
+      questions: questions,
       timeLimit: timeLimit,
       mode: mode,
       categorySlug: categorySlug,

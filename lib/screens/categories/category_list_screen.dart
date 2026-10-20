@@ -58,13 +58,19 @@ class CategoryListScreen extends StatelessWidget {
                 ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 18, 16, 8),
-                child: GridView.count(
-                  crossAxisCount: 2,
+                // A fixed tile height rather than an aspect ratio: on narrow
+                // phones the ratio made tiles too short for the two-line
+                // bilingual titles and they overflowed. 156 matches the
+                // previous look on a standard ~390pt-wide phone.
+                child: GridView(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    mainAxisExtent: 156,
+                  ),
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
-                  childAspectRatio: 1.12,
                   children: ExamCategory.values.map((category) {
                     final count = repo.questionsFor(category).length;
                     return _CategoryTile(category: category, count: count);

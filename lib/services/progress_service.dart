@@ -44,12 +44,30 @@ class SavedSession {
 /// itself — which works entirely offline from bundled content — is never
 /// blocked by this.
 class ProgressService {
-  SupabaseClient get _client => Supabase.instance.client;
+  /// Anything the UI waits on (starting a quiz, the home screen's mistakes
+  /// count) must never hang on a slow or dead connection — past this the
+  /// call gives up and the app carries on offline.
+  static const _blockingTimeout = Duration(seconds: 4);
+  static const _backgroundTimeout = Duration(seconds: 10);
+
+  /// Null when Supabase never initialized (no network at launch, a failed
+  /// init, widget tests). `Supabase.instance` throws in that state, so every
+  /// access goes through here instead of touching it directly.
+  SupabaseClient? get _clientOrNull {
+    try {
+      return Supabase.instance.client;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  SupabaseClient get _client => _clientOrNull!;
 
   Future<void> ensureSignedIn() async {
-    if (_client.auth.currentUser != null) return;
+    final client = _clientOrNull;
+    if (client == null || client.auth.currentUser != null) return;
     try {
-      await _client.auth.signInAnonymously(data: {'platform': _platformLabel});
+      await client.auth.signInAnonymously(data: {'platform': _platformLabel}).timeout(_backgroundTimeout);
     } catch (e) {
       debugPrint('ProgressService.ensureSignedIn failed (continuing offline): $e');
     }
@@ -70,7 +88,7 @@ class ProgressService {
     }
   }
 
-  String? get userId => _client.auth.currentUser?.id;
+  String? get userId => _clientOrNull?.auth.currentUser?.id;
 
   Future<SavedSession?> findResumable({required String mode, String? category}) async {
     final uid = userId;
@@ -88,7 +106,7 @@ class ProgressService {
       if (category != null) {
         query = query.eq('category', category);
       }
-      final row = await query.order('updated_at', ascending: false).limit(1).maybeSingle();
+      final row = await query.order('updated_at', ascending: false).limit(1).maybeSingle().timeout(_blockingTimeout);
       if (row == null) return null;
       return SavedSession.fromRow(row);
     } catch (e) {
@@ -119,7 +137,8 @@ class ProgressService {
             'remaining_seconds': timeLimitSeconds,
           })
           .select('id')
-          .single();
+          .single()
+          .timeout(_backgroundTimeout);
       return row['id'] as String;
     } catch (e) {
       debugPrint('ProgressService.createSession failed (continuing without sync): $e');
@@ -129,7 +148,7 @@ class ProgressService {
 
   Future<void> discardSession(String sessionId) async {
     try {
-      await _client.from('quiz_sessions').delete().eq('id', sessionId);
+      await _client.from('quiz_sessions').delete().eq('id', sessionId).timeout(_blockingTimeout);
     } catch (e) {
       debugPrint('ProgressService.discardSession failed: $e');
     }
@@ -154,7 +173,7 @@ class ProgressService {
         'question_id': questionId,
         'category': category,
         'is_correct': isCorrect,
-      });
+      }).timeout(_backgroundTimeout);
     } catch (e) {
       debugPrint('ProgressService.logAttempt failed: $e');
     }
@@ -175,7 +194,7 @@ class ProgressService {
         'results': results,
         if (remainingSeconds != null) 'remaining_seconds': remainingSeconds,
         'updated_at': DateTime.now().toUtc().toIso8601String(),
-      }).eq('id', sessionId);
+      }).eq('id', sessionId).timeout(_backgroundTimeout);
     } catch (e) {
       debugPrint('ProgressService.checkpoint failed: $e');
     }
@@ -187,7 +206,7 @@ class ProgressService {
       await _client.from('quiz_sessions').update({
         'status': 'completed',
         'completed_at': DateTime.now().toUtc().toIso8601String(),
-      }).eq('id', sessionId);
+      }).eq('id', sessionId).timeout(_backgroundTimeout);
     } catch (e) {
       debugPrint('ProgressService.completeSession failed: $e');
     }
@@ -206,7 +225,8 @@ class ProgressService {
           .select('question_id, is_correct')
           .eq('user_id', uid)
           .order('answered_at', ascending: false)
-          .limit(2000);
+          .limit(2000)
+          .timeout(_backgroundTimeout);
       final seen = <String>{};
       final missed = <String>[];
       for (final row in rows) {
@@ -229,8 +249,8 @@ class ProgressService {
     final uid = userId;
     if (uid == null) return false;
     try {
-      await _client.from('quiz_sessions').delete().eq('user_id', uid);
-      await _client.from('question_attempts').delete().eq('user_id', uid);
+      await _client.from('quiz_sessions').delete().eq('user_id', uid).timeout(_backgroundTimeout);
+      await _client.from('question_attempts').delete().eq('user_id', uid).timeout(_backgroundTimeout);
       return true;
     } catch (e) {
       debugPrint('ProgressService.resetAllProgress failed: $e');

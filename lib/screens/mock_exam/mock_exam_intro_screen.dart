@@ -18,12 +18,19 @@ class MockExamIntroScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      // The start button is pinned below the scrollable info, never inside
+      // it: at the end of the scroll content it sat below the fold on
+      // shorter phones, so testers saw no button to press at all.
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(22, 24, 22, 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(22, 24, 22, 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
               Container(
                 padding: const EdgeInsets.all(24),
                 decoration: const BoxDecoration(gradient: AppColors.gradientHeader, borderRadius: BorderRadius.all(Radius.circular(24))),
@@ -70,8 +77,13 @@ class MockExamIntroScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: 32),
-              Material(
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(22, 8, 22, 20),
+              child: Material(
                 color: AppColors.deepBlue,
                 borderRadius: BorderRadius.circular(18),
                 child: InkWell(
@@ -98,8 +110,8 @@ class MockExamIntroScreen extends StatelessWidget {
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

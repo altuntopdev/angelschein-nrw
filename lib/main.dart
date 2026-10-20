@@ -57,6 +57,16 @@ class AngelscheinApp extends StatelessWidget {
             theme: AppTheme.light(),
             darkTheme: AppTheme.dark(),
             themeMode: settings.themeMode,
+            // Very large system font settings pushed fixed-height elements
+            // (category tiles, the bottom bar) into overflow; past 1.3x the
+            // layout can't hold, so text stops growing there.
+            builder: (context, child) {
+              final media = MediaQuery.of(context);
+              return MediaQuery(
+                data: media.copyWith(textScaler: media.textScaler.clamp(maxScaleFactor: 1.3)),
+                child: child!,
+              );
+            },
             home: settings.onboardingDone ? const HomeShell() : const OnboardingScreen(),
           );
         },
